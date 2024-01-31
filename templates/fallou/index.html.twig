@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FallouController!{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { 
+            margin: 1em auto; 
+            max-width: 800px; 
+            width: 95%; 
+            font: 18px/1.5 sans-serif; 
+        }
+
+        .example-wrapper code { 
+            background: #F5F5F5; 
+            padding: 2px 6px; 
+            background-color: black; 
+            color: white; /* Ajout d'une couleur de texte blanche pour le code */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #00262d;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #333;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Welcome to my web page</h1>
+        <h2 class='text t1'>Hello I am <span class='textclass'>Serigne Fallou Mbaye</span></h2>
+  <h2 class='text t2'> I am a student in Telecommunications Networks at Roanne.</h2>
+  <h2 class='text t3'> My academic journey has provided me with a solid foundation and has opened interesting</h2>
+  <h2 class='text t4'> perspectives in the field of cybersecurity.</h2>
+  <h2 class='text t5'> Driven by passion, I am seeking opportunities to apply my skills and further enhance</h2>
+  <h2 class='text t6'> my knowledge in this domain.</h2>
+  <h2 class='text t7'> In this website, you will find a detailed presentation of my academic journey, my skills</h2>
+  <h2 class='text t8'> and my professional experiences. Feel free to contact me.</h2>
+        <a href="/ensavoirplus" class="btn btn-primary">En savoir plus</a>
+    </div>
+{% endblock %}

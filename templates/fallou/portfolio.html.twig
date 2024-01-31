@@ -1,0 +1,175 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fallou - Portfolio{% endblock %}
+
+{% block body %}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .project {
+            margin-bottom: 40px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .gallery-image {
+            flex: 0 0 50%; /* Réduire la largeur pour s'adapter à deux images par ligne */
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            margin-bottom: 10px; /* Ajouter un peu d'espace entre les images */
+        }
+
+        .gallery-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-image:hover img {
+            transform: scale(1.1);
+        }
+        /* CSS animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+
+    <div class="container">
+        <h1>Portfolio de Serigne Fallou Mbaye</h1>
+
+        <section id="projects">
+            <h2>Compétences</h2>
+            <div class="project">
+                <img src="project1.jpg" alt="Projet 1">
+                <h3>Administrer les réseaux et l'internet</h3>
+                <p> Maîtriser les lois fondamentales de l’électricité afin d’intervenir sur des équipements de réseaux et télécommunications (habilitation électrique)<br/>
+• Comprendre les principes et standards du codage de l’information<br/>
+• Configurer les fonctions de base du réseau local (Ethernet, IPv4, intro IPv6, commutation, VLANs, routage statique)<br/>
+• Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation afin d’interagir avec ceux-ci pour la configuration et
+administration des réseaux et services fournis (DHCP, DNS, ...)<br/>
+• Savoir identifier les dysfonctionnements du réseau local<br/>
+• Installer un poste client (et le sécuriser: antivirus, parefeu, comptes, .)<br/></p>
+                <div class="image-gallery">
+                    <div class="gallery-image">
+                        <img src="https://www.shutterstock.com/shutterstock/photos/475836541/display_1500/stock-photo-mathematics-equation-calculate-algebra-function-concept-475836541.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="https://media.istockphoto.com/id/1043633022/fr/photo/c%C3%A2bles-de-r%C3%A9seau-ethernet-et-interrupteur-concept-de-centre-de-donn%C3%A9es.webp?s=1024x1024&w=is&k=20&c=HN3GkMsETx3Jwt0iTNbVjLeKmo_XDmrf6wpZHANHSYU=" alt="Image 2">
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Projet 2">
+                <h3>Connecter les entreprises et les usagers</h3>
+                <p>• Mesurer et analyser les signaux (audio et vidéo, ordres de grandeurs, comprendre la dualité temps/fréquence et utiliser des équipements d’analyse spectrale, avec projets
+autour de la chaîne d’acquisition/traitement)<br/>
+• Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement<br/>
+• Déployer des supports de transmission (traitement au choix de la propagation, câblage LAN, fibre optique, ou une introduction à l’IoT)<br/>
+• Connecter les systèmes de ToIP (s’interprétant ici comme la possibilité de se connecter au réseau téléphonique)<br/>
+• Communiquer avec un client ou un collaborateur<br/></p>
+                <div class="image-gallery">
+                    <div class="gallery-image">
+                        <img src="https://media.istockphoto.com/id/1149283458/fr/photo/concept-de-protection-et-dinternet.webp?s=1024x1024&w=is&k=20&c=5X9-pdbFREZE8-YbRiQ5zH0r1YNzRdzazIKaqIApfcI=" alt="Image 1">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="https://cdn.pixabay.com/photo/2015/06/24/13/31/tower-820001_960_720.jpg" alt="Image 2">
+                    </div>
+                </div>
+            </div>
+             <div class="project">
+                <img src="project1.jpg" alt="Projet 1">
+                <h3>Créer des outils et applications</h3>
+                <p>Utiliser un système informatique et ses outils (intro système, fichiers, CLI, zips, outils collaboratifs sur Internet, hygiène informatique. . . : référentiel PIX et CyberEdu)<br/>
+• Lire, exécuter, corriger et modifier un programme (programmes simples type scripts, algorithme inclus)<br/>
+• Traduire un algorithme, dans un langage et pour un environnement donné (peut inclure plusieurs, y compris objet)<br/>
+• Connaître l’architecture et les technologies d’un site Web (Langages et outils : HTML, CSS, CMS, JS, responsive)<br/>
+• Choisir les mécanismes de gestion de données adaptés au développement de l’outil (BDD, SQL, LDAP, JSON, sérialisation, conception de BDD simple. . . )<br/>
+• S’intégrer dans un environnement propice au développement et au travail collaboratif (intro méthodes agiles)<br/></p>
+                <div class="image-gallery">
+                    <div class="gallery-image">
+                        <img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/technology-1283624_960_720.jpg" alt="Image 1">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_960_720.jpg" alt="Image 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

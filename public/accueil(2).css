@@ -1,0 +1,134 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  font-family: "Harlow Solid Italic", sans-serif; /* Utilisation de Rockwell comme police */
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Positionner en haut */
+  min-height: 100vh;
+  padding: 20px; /* Ajout d'une marge pour éviter que le texte soit collé au bord */
+}
+
+.text {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.textclass {
+  color: red;
+}
+
+.t1, .t2 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.t1 {
+  font-family: "Harlow Solid Italic", sans-serif; /* Changement de police pour t1 */
+  color: white; /* Changement de couleur pour t1 */
+  animation: type 2.5s steps(25, end), curser1 0.8s 2;
+  border-right: 2px solid transparent;
+  animation-delay: 0;
+  transition: 0.2s;
+}
+
+.t2 {
+  font-family: "Harlow Solid Italic", sans-serif; /* Changement de police pour t2 */
+  color: white; /* Changement de couleur pour t2 */
+  animation: type 2s steps(25, end), curser 0.8s 2;
+  border-right: 4px solid white;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+
+.t3 {
+  font-family: "Harlow Solid Italic", sans-serif; /* Changement de police pour t2 */
+  color: white; /* Changement de couleur pour t2 */
+  animation: type 2s steps(25, end), curser 0.8s 2;
+  border-right: 3px solid white;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+.t4 {
+  font-family: "Harlow Solid Italic", sans-serif; /* Changement de police pour t2 */
+  color: white; /* Changement de couleur pour t2 */
+  animation: type 2.7s steps(25, end), curser 0.8s 2;
+  border-right: 3px solid white;
+  animation-fill-mode: both;
+  animation-delay: 5s;
+}
+
+.t5 {
+  font-family: "Harlow Solid Italic", sans-serif; /* Changement de police pour t2 */
+  color: white; /* Changement de couleur pour t2 */
+  animation: type 2s steps(25, end), curser 0.8s 2;
+  border-right: 3px solid white;
+  animation-fill-mode: both;
+  animation-delay: 7s;
+}
+
+.t6 {
+  font-family: "Harlow Solid Italic", sans-serif; /* Changement de police pour t2 */
+  color: white; /* Changement de couleur pour t2 */
+  animation: type 3s steps(25, end), curser 0.8s 2;
+  border-right: 3px solid white;
+  animation-fill-mode: both;
+  animation-delay: 9s;
+}
+
+.t7 {
+  font-family: "Harlow Solid Italic", sans-serif; /* Changement de police pour t2 */
+  color: white; /* Changement de couleur pour t2 */
+  animation: type 2s steps(25, end), curser 0.8s 2;
+  border-right: 3px solid white;
+  animation-fill-mode: both;
+  animation-delay: 11s;
+}
+
+.t8 {
+  font-family: "Harlow Solid Italic", sans-serif; /* Changement de police pour t2 */
+  color: white; /* Changement de couleur pour t2 */
+  animation: type 2s steps(25, end), curser 0.8s 2;
+  border-right: 3px solid white;
+  animation-fill-mode: both;
+  animation-delay: 13s;
+}
+
+.t1:active {
+  border-right: 8px solid transparent;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes curser {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes curser1 {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}

@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fallou{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+    <div class="container">
+        <header>
+            <h1>Intitulé du poste Réseaux et Télécommunications de mes rêves</h1>
+        </header>
+        <section>
+       <h3> Informations</h3>
+        <p><strong> Serigne Fallou Mbaye</strong><br/> Né le 27 Septembre 2003</p>
+    <p> Boulevard de Belgique - 42300 Roanne<br/> 07 58 71 54 98<br/>mserignefallou16@gmail.com</p>
+    </section>
+   </div>
+
+        </section>
+        <h2>Savoir-etre</h2>
+       <p><strong> Organisé,rigoureux,ambitieux et surtout trés sérieux,j’ai la détermination et la volonté de faire preuve de motivation dans mes études de travailler autant qu’il faudra pour réaliser mon projet d’etude
+Esprit d’équipe,trés communicative avec une forte conscience professionnelle ,polyvalent,gestion du stress</p></strong>
+        <section>
+        <section>
+            <h2>Formations</h2>
+             <strong>
+           <p> <strong>2019-2020 Brevet de Fin d'Etude Moyen (BFEM)</strong></p>
+            <p> 2022-2023 Baccauréat en Sciences Expérimentales  avec une mention Bien au Lycée de Ndande</p>
+            <p> 2023-2024 Réseaux&Télécommunications à l'IUT de Roanne</p>
+        </section>
+
+        <section>
+            <h2>Expériences Professionnelles</h2>
+            <p><strong> Juillet -Aout 2023</strong><br/><em>PLONGEUR EN RESTAURATION</em><br/>Le Coste-Dakar<br/>Préparation de plat simple comme des salades et des sandwichs en respectant<br/>lesindications du chef de cuisine</p>
+    <p> <strong> Juin 2021-Juillet 2022</strong><br/><em>PREPARATEUR DE COMMANDES</em><br/>Auchan- Saint Louis<br/>Réception des marchandises et mis en rayon<br/>Gestion des stocks</p></p>
+           
+        </section>
+
+        <section>
+            <h2>Compétences</h2>
+            <p>  <em>CONNECTER</em><br/><strong>Déployer des supports de transmission(cablage)<br/>Maitriser les fondametaux des systemes électroniques</strong></p>
+            <p> <em>ADMINISTRER</em><br/><strong>Configurer les fonctions de base du réseau local(Adresse IP¨v4)<br/>Identifier les dysfonctionnements du réseau local<br/> Installation et Utilisation PC</strong></p>
+            <p> <em>CREER DES OUTILS ET DES APPLICATIONS</em><br/><strong>Créer un  site web<br/>Algorithme et langages (python et C)</strong></p>
+        </section>
+        <section>
+        <h4> Langues</h4>
+         <p> <strong> Français</strong>(Courant)<br/><strong> Anglais </strong>(intermédiaire) </p>
+        </section>
+        <section>
+        <h4> Centre d 'Interet </h4>
+         <p> <strong> Basket-ball</strong><br/><strong> Lecture </strong><strong><br/> Photographie</strong><br/><strong> Documentation</strong><br/></p>
+        </section>
+
+</div>
+
+<div class="inscription-form">
+        <h2>Inscription</h2>
+        <form id="inscriptionForm">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" class="form-control" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <button type="submit">Télécharger le CV</button>
+        </form>
+
+        <!-- Ajouter un lien pour télécharger le CV -->
+        <a id="downloadLink" download="cv_Serigne Fallou.pdf">Télécharger le CV</a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('inscriptionForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Empêcher la soumission du formulaire
+
+        // Vérifier si les champs du formulaire sont remplis
+        var nom = document.getElementById('nom').value;
+        var prenom = document.getElementById('prenom').value;
+        var email = document.getElementById('email').value;
+
+        if (nom && prenom && email) {
+            // Remplacez le chemin par le chemin réel de votre CV
+            var cvPath = '/cv.pdf';
+
+            // Créer un lien pour télécharger le CV
+            var downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = cvPath;
+
+            // Afficher le lien et déclencher le téléchargement
+            downloadLink.style.display = 'block';
+            downloadLink.click();
+        } else {
+            alert('Veuillez remplir tous les champs du formulaire.');
+        }
+    });
+</script>
+{% endblock %}
